@@ -10,6 +10,10 @@
 	}
 }
 
+#donate {
+	font-size: 1.5em;
+}
+
 .text-black {
 	color: #000;
 }
@@ -23,3 +27,10 @@ body {
 		line-height: 1.5;
 	}
 }
+
+@media (max-width: 480px) {
+	#donate {
+		font-size: .7em;
+	}
+}
+
