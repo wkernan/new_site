@@ -16,7 +16,7 @@
     var divrot = ((Math.random() * (50 + 50) - 50)).toFixed();
     var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
     $newdiv = $('<div/>').append("<div>"+textarray[rannum]+"</div>").css({
-        'width': '500px',
+        'width': '300px',
         'height': '50px',
         'font-size': '46px',
         'color': color,
