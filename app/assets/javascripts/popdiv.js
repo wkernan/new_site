@@ -1,9 +1,9 @@
 (function makeDiv(){
     var textarray = [
         "so wow!!",
-        "sew amaze!",
+        "soo amaze!",
         "much hunt!!",
-        "austin cule",
+        "austin cule!",
         "very doge!",
         "smell coin!",
         "to the moon!",
@@ -32,7 +32,7 @@
         'left':posx+'px',
         'top':posy+'px',
         'display':'none'
-    }).appendTo( 'body' ).fadeIn(300).delay(5000).fadeOut(400, function(){
+    }).appendTo( 'body' ).fadeIn(400).delay(4000).fadeOut(400, function(){
        $(this).remove();
        makeDiv(); 
     }); 
