@@ -5,6 +5,7 @@
 		<br>
 		<img src="/assets/texas.jpg" width="200px" height="200px">
 		<br>
+		<h2>When Ð120,000 is reached the hunt will be on!</h2>
 		<h3>
 		Ð<%= JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_balance").body)['data']['balance'] %> of Ð120,000
 		</h3>
@@ -41,12 +42,37 @@
 				Also inside the cache will be the next clue to where the next cache is. This will continue until all 5 caches are found. 
 				The fifth cache I'll hide near a bar so we can all enjoy a drink and you can give me some feedback on how it went.
 			</h3>
+			<div class="row center">
+				<div id="mc_embed_signup">
+					<form action="http://dogecoinhunt.us8.list-manage.com/subscribe/post?u=f13a3920d3d2e611c9d7f6673&amp;id=a4ee6121e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<h3><strong>Subscribe to find out when the hunt is on!</strong></h3>
+					<div class="mc-field-group">
+						<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email Address">
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">
+					</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	    			<div style="position: absolute; left: -5000px;"><input type="text" name="b_f13a3920d3d2e611c9d7f6673_a4ee6121e6" value=""></div>
+					</form>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3 center">
+			<h3 style="margin-top: 0px;"><strong>Be sure to follow to get the first clue!</strong><h3>
 			<a class="twitter-timeline" href="https://twitter.com/dogecoinhunt" data-widget-id="460328419004149761">Tweets by @dogecoinhunt</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 	</div>
 </div>
+<br>
+<footer class="f-splash">
+	<div class="container">
+		<br>
+		<h3><%= link_to 'Contact', 'mailto:admin@dogecoinhunt.com', target: "_blank" %></h3>
+	</div>
+</footer>
+
 
 
