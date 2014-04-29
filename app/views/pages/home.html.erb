@@ -2,10 +2,8 @@
 	<div class="container">
 		<h1>Dogecoin Hunt</h1>
 		<h2>The Great Austin Dogecoin Hunt!</h2>
-		<br>
-		<img src="/assets/texas.jpg" width="200px" height="200px">
-		<br>
 		<h2>When Ð120,000 is reached the hunt will be on!</h2>
+		<img src="/assets/texas.jpg" width="200px" height="200px">
 		<h3>
 		Ð<%= JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_balance").body)['data']['balance'] %> of Ð120,000
 		</h3>
