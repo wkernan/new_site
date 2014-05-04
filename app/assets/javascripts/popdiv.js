@@ -32,7 +32,7 @@
         'left':posx+'px',
         'top':posy+'px',
         'display':'none'
-    }).appendTo( 'body' ).fadeIn(400).delay(4000).fadeOut(400, function(){
+    }).appendTo( 'body' ).fadeIn(300).delay(1500).fadeOut(300, function(){
        $(this).remove();
        makeDiv(); 
     }); 
