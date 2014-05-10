@@ -4,6 +4,7 @@ ruby '1.9.3'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'httparty'
 gem 'certified'
+gem 'json'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
