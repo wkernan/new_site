@@ -15,7 +15,7 @@
 			<% if @balance >= 120000 %>
 				<span style="color: #8CC152;">ON!</span>
 			<% else %>
-				<span style="color: red;">OFF! </span><%= 120000 - @balance %> still needed.
+				<span style="color: #DD4814;">OFF!</span> Ð<%= 120000 - @balance %> still needed.
 			<% end %>
 			</h2>
 			<h2>Please be sure to donate, subscribe and follow us on twitter below, so we can alert you when the hunt is on.</h2>
@@ -35,6 +35,7 @@
 					</div>
 				</div>
 			</div>
+			<%= render 'layouts/donations' %>
 		</div>
 	</div>
 </div>
