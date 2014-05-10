@@ -5,17 +5,17 @@
 		<h2>When Ð120,000 is reached the hunt will be on!</h2>
 		<img src="/assets/texas.jpg" width="200px" height="200px">
 		<h3>
-		Ð<%= JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_balance").body)['data']['balance'] %> of Ð120,000
+		Ð<%= @balance %> of Ð120,000
 		</h3>
 		<div class="row">
 			<div class="progress progress-striped active">
-				<div class="progress-bar" style="width: <%= (JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_balance").body)['data']['balance'] * 100 / 120000)  %>%;"></div>
+				<div class="progress-bar" style="width: <%= @balance * 100 / 120000 %>%;"></div>
 			</div>
 			<h2> The hunt is 
-			<% if JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_balance").body)['data']['balance'] >= 120000 %>
+			<% if @balance >= 120000 %>
 				<span style="color: #8CC152;">ON!</span>
 			<% else %>
-				<span style="color: red;">OFF! </span><%= 120000 - JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_balance").body)['data']['balance'] %> still needed.
+				<span style="color: red;">OFF! </span><%= 120000 - @balance %> still needed.
 			<% end %>
 			</h2>
 			<h2>Please be sure to donate, subscribe and follow us on twitter below, so we can alert you when the hunt is on.</h2>
