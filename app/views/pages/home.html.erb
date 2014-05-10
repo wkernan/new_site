@@ -11,18 +11,43 @@
 			<div class="progress progress-striped active">
 				<div class="progress-bar" style="width: <%= (JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_balance").body)['data']['balance'] * 100 / 120000)  %>%;"></div>
 			</div>
+			<h2> The hunt is 
+			<% if JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_balance").body)['data']['balance'] >= 120000 %>
+				<span style="color: #8CC152;">ON!</span>
+			<% else %>
+				<span style="color: red;">OFF! </span><%= 120000 - JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_balance").body)['data']['balance'] %> still needed.
+			<% end %>
+			</h2>
+			<h2>Please be sure to donate, subscribe and follow us on twitter below, so we can alert you when the hunt is on.</h2>
 			<br>
 			<div class="col-xs-8 col-xs-offset-2 well text-black">
-				<p>You can donate to the hunt by sending DOGE to this address</p>
-				<p id="donate">DJXezeVSnyvXiCf9icnwJ5Y3a73eA6mgKL</p>
+				<h4>You can donate to the hunt by sending DOGE to this address</h4>
+				<p id="donate"><%= link_to 'DJXezeVSnyvXiCf9icnwJ5Y3a73eA6mgKL', 'http://dogechain.info/address/DJXezeVSnyvXiCf9icnwJ5Y3a73eA6mgKL' %></p>
+				<h4>or</h4>
 				<div class="panel-heading" id="accordion">
 					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">QR Code</a>
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Click for QR Code</a>
 					</h4>
 				</div>
 				<div id="collapseTwo" class="panel-collapse collapse">
 					<div class="panel-body">
 						<img src="/assets/qr_code.gif" width="200px">
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-8 col-xs-offset-2 well text-black">
+				<div class="panel-heading" id="accordion" style="padding-bottom: 0px;">
+					<h2 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" style="line-height: 1.5; font-size: 24px; font-weight: 500;">Click to see donations</a>
+					</h2>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse">
+					<div class="panel-body" style="padding-top: 0px;">
+						<h4><%= JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_transactions&num=5&type=receive").body)['data']['transactions'][0]['amount'] %> Thanks!</h4>
+						<h4><%= JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_transactions&num=5&type=receive").body)['data']['transactions'][1]['amount'] %> Thanks!</h4>
+						<h4><%= JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_transactions&num=5&type=receive").body)['data']['transactions'][2]['amount'] %> Thanks!</h4>
+						<h4><%= JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_transactions&num=5&type=receive").body)['data']['transactions'][3]['amount'] %> Thanks!</h4>
+						<h4><%= JSON.parse(HTTParty.get("https://www.dogeapi.com/wow/v2/?api_key=1e0zh9wruemcmom3r4kml92kg&a=get_transactions&num=5&type=receive").body)['data']['transactions'][4]['amount'] %> Thanks!</h4>
 					</div>
 				</div>
 			</div>
