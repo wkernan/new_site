@@ -12,7 +12,7 @@
         "amaze!!",
         "such trasure!!!"];
     var rannum = Math.floor(Math.random()*textarray.length);
-    var divsize = ((Math.random()*100) + 50).toFixed();
+    var divsize = ((Math.random() * 100) + 50).toFixed();
     var divrot = ((Math.random() * (50 + 50) - 50)).toFixed();
     var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
     $newdiv = $('<div/>').append("<div>"+textarray[rannum]+"</div>").css({
