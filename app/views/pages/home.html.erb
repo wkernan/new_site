@@ -4,13 +4,13 @@
 		<h2>The Great Austin Dogecoin Hunt!</h2>
 		<h2>When Ð120,000 is reached the hunt will be on!</h2>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4" style="padding-top: 15px; padding-bottom: 15px;">
 				<img src="/assets/texas.jpg" width="200px" height="200px">
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4" style="padding-top: 15px; padding-bottom: 15px;">
 				<img src="/assets/dogecoin-300.png" width="200px" height="200px">
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4" style="padding-top: 15px; padding-bottom: 15px;">
 				<iframe width="300" height="200" src="//www.youtube.com/embed/_KVZmS_UO5I" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
@@ -31,19 +31,16 @@
 			<h2>Please be sure to donate, subscribe and follow us on twitter below, so we can alert you when the hunt is on.</h2>
 			<br>
 			<div class="col-xs-8 col-xs-offset-2 well text-black">
-				<h4>You can donate to the hunt by sending DOGE to this address</h4>
+				<h3>You can donate to the hunt by sending DOGE to this address</h3>
 				<p id="donate"><%= link_to 'DJXezeVSnyvXiCf9icnwJ5Y3a73eA6mgKL', 'http://dogechain.info/address/DJXezeVSnyvXiCf9icnwJ5Y3a73eA6mgKL', target: "_blank" %></p>
 				<h4>or</h4>
-				<div class="panel-heading" id="accordion">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Click for QR Code</a>
-					</h4>
-				</div>
-				<div id="collapseTwo" class="panel-collapse collapse">
-					<div class="panel-body">
-						<img src="/assets/qr_code.gif" width="200px">
-					</div>
-				</div>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="padding-bottom: 15px;">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="7M5LPZHJWKEN4">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+				<p>Any funds donated through PayPal will be exchanged for dogecoin and added to the address</p>
 			</div>
 			<%= render 'layouts/donations' %>
 		</div>
