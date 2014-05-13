@@ -20,7 +20,8 @@
         'height': '50px',
         'font-size': '46px',
         'color': color,
-        'font-family': 'Comic Sans MS'
+        'font-family': 'Comic Sans MS',
+        'z-index': '1000'
     });
     
     var posx = (Math.random() * ($(document).width() - divsize)).toFixed();
@@ -32,7 +33,7 @@
         'left':posx+'px',
         'top':posy+'px',
         'display':'none'
-    }).appendTo( 'body' ).fadeIn(300).delay(1500).fadeOut(300, function(){
+    }).appendTo( '#pop' ).fadeIn(300).delay(1500).fadeOut(300, function(){
        $(this).remove();
        makeDiv(); 
     }); 
