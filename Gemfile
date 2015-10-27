@@ -1,18 +1,11 @@
 source 'https://rubygems.org'
-<<<<<<< HEAD
 ruby '2.0.0'
-=======
-ruby '1.9.3'
->>>>>>> 6c2a61793dba55e01f731186f0b7f445594b6662
 
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'httparty'
 gem 'certified'
 gem 'json'
-<<<<<<< HEAD
 gem 'block_io', '1.0.6'
-=======
->>>>>>> 6c2a61793dba55e01f731186f0b7f445594b6662
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
