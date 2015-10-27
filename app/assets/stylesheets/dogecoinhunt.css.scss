@@ -1,0 +1,83 @@
+.splash {
+	padding: 0 0 2em;
+	background-attachment: fixed;
+	text-align: center;
+	background-color: #F6B442;
+	color: #fff;
+	h1 {
+		font-size: 72px;
+		font-weight: bolder;
+	}
+}
+
+.progress {
+	height: 30px;
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+#donate {
+	font-size: 1.5em;
+}
+
+.text-black {
+	color: #000;
+}
+
+body {
+	background-color: #3BA4DA;
+}
+
+.row {
+	color: white;
+	h3 {
+		line-height: 1.5;
+	}
+}
+
+@media (max-width: 480px) {
+	#donate {
+		font-size: .7em;
+	}
+}
+
+.f-splash {
+	padding: 0 0 2em;
+	background-attachment: fixed;
+	text-align: center;
+	background-color: #8CC152;
+	color: #fff;
+}
+
+.center {
+	text-align: center;
+}
+
+.form-control {
+	display: inline;
+	width: 25%;
+	padding-top: 4px;
+}
+
+input[type=email]:focus {
+	outline: none !important;
+	border: 2px solid rgb(246, 180, 66);
+	box-shadow: 0 0 5px rgb(246, 180, 66);
+}
+
+footer a {
+	color: #3BA4DA;
+}
+
+.well {
+	h2 {
+		margin-top: 0px;
+		}
+	h3 {
+		margin-top: 10px;
+	}
+	a {
+		color: #8CC152;
+	}
+	padding-top: 0px;
+}

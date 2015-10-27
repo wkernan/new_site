@@ -1,0 +1,108 @@
+<div class="splash">
+	<div class="container" id="pop">
+		<h1>Dogecoin Hunt</h1>
+		<h2>The Great Austin Dogecoin Hunt!</h2>
+		<h2>When Ð120,000 is reached the hunt will be on!</h2>
+		<div class="row">
+			<div class="col-md-4" style="padding-top: 15px; padding-bottom: 15px;">
+				<img src="/assets/texas.jpg" width="200px" height="200px">
+			</div>
+			<div class="col-md-4" style="padding-top: 15px; padding-bottom: 15px;">
+				<img src="/assets/dogecoin-300.png" width="200px" height="200px">
+			</div>
+			<div class="col-md-4" style="padding-top: 15px; padding-bottom: 15px;">
+				<iframe width="300" height="200" src="//www.youtube.com/embed/_KVZmS_UO5I" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<h3>
+		Ð<%= @balance %> of Ð120,000
+		</h3>
+		<div class="row">
+			<div class="progress progress-striped active">
+				<div class="progress-bar" style="width: <%= @balance.to_i * 100 / 120000 %>%;"></div>
+			</div>
+			<h2> The hunt is 
+			<% if @balance.to_i >= 120000 %>
+				<span style="color: #8CC152;">ON!</span>
+			<% else %>
+				<span style="color: #DD4814;">OFF!</span> Ð<%= 120000 - @balance.to_i %> still needed.
+			<% end %>
+			</h2>
+			<h2>Please be sure to donate, subscribe and follow us on twitter below, so we can alert you when the hunt is on.</h2>
+			<br>
+			<div class="col-xs-8 col-xs-offset-2 well text-black">
+				<h3>You can donate to the hunt by sending DOGE to this address</h3>
+				<p id="donate"><%= link_to 'A4uyrmBRKZpM4K7TD31Yufj8nEdVHii6D5', 'http://dogechain.info/address/A4uyrmBRKZpM4K7TD31Yufj8nEdVHii6D5', target: "_blank" %></p>
+				<%= render 'layouts/qrcode' %>
+				<h4>or</h4>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="padding-bottom: 15px;">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="7M5LPZHJWKEN4">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+				<p>Any funds donated through PayPal will be exchanged for dogecoin and added to the address</p>
+			</div>
+			<%= render 'layouts/donations' %>
+		</div>
+	</div>
+</div>
+<div class="container" style="padding-top: 45px;">
+	<div class="row">
+		<div class="col-md-9">
+			<h2 style="text-align: center; text-decoration: underline; margin-top: 0px;"><strong>How it works</strong></h2>
+			<h3>
+				The Saturday that the hunt is on, I will hide 5 caches around the downtown Austin area. 
+				I will send out a tweet (so make sure you follow me) for a clue of the first cache location. 
+				The first player to find the cache will be able to pull out a paper wallet with Ð20,000. 
+				Also inside the cache will be the next clue to where the next cache is. This will continue until all 5 caches are found. 
+				The fifth cache I'll hide near a bar so we can all enjoy a drink and you can give me some feedback on how it went. 
+				The last Ð20,000 will help to cover expenses.
+			</h3>
+			<div class="row center">
+				<div id="mc_embed_signup">
+					<form action="http://dogecoinhunt.us8.list-manage.com/subscribe/post?u=f13a3920d3d2e611c9d7f6673&amp;id=a4ee6121e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<h3><strong>Subscribe to find out when the hunt is on!</strong></h3>
+					<div class="mc-field-group">
+						<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email Address">
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">
+					</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	    			<div style="position: absolute; left: -5000px;"><input type="text" name="b_f13a3920d3d2e611c9d7f6673_a4ee6121e6" value=""></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 center">
+			<h3 style="margin-top: 0px;"><strong>Be sure to follow to get the first clue!</strong><h3>
+			<a class="twitter-timeline" href="https://twitter.com/dogecoinhunt" data-widget-id="460328419004149761">Tweets by @dogecoinhunt</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+</div>
+<br>
+<footer class="f-splash">
+	<div class="container">
+		<br>
+		<ul>
+			<li style="display: inline; padding-right: 10px;"><h3 style="display: inline;"><%= link_to 'Contact', 'mailto:admin@dogecoinhunt.com', target: "_blank" %></h3></li> •
+			<li style="display: inline; padding-left: 10px;"><h3 style="display: inline;"><%= link_to 'What is Dogecoin?', 'http://dogecoin.wikia.com/wiki/Beginners_guide_to_Dogecoin', target: "_blank" %></h3></li>
+		</ul>
+	</div>
+	<script>
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  	ga('create', 'UA-50368749-1', 'dogecoinhunt.com');
+  	ga('send', 'pageview');
+
+	</script>
+</footer>
+
+
+
