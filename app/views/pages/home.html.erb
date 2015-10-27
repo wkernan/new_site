@@ -19,6 +19,7 @@
 		</h3>
 		<div class="row">
 			<div class="progress progress-striped active">
+<<<<<<< HEAD
 				<div class="progress-bar" style="width: <%= @balance.to_i * 100 / 120000 %>%;"></div>
 			</div>
 			<h2> The hunt is 
@@ -26,13 +27,26 @@
 				<span style="color: #8CC152;">ON!</span>
 			<% else %>
 				<span style="color: #DD4814;">OFF!</span> Ð<%= 120000 - @balance.to_i %> still needed.
+=======
+				<div class="progress-bar" style="width: <%= @balance * 100 / 120000 %>%;"></div>
+			</div>
+			<h2> The hunt is 
+			<% if @balance >= 120000 %>
+				<span style="color: #8CC152;">ON!</span>
+			<% else %>
+				<span style="color: #DD4814;">OFF!</span> Ð<%= 120000 - @balance %> still needed.
+>>>>>>> 6c2a61793dba55e01f731186f0b7f445594b6662
 			<% end %>
 			</h2>
 			<h2>Please be sure to donate, subscribe and follow us on twitter below, so we can alert you when the hunt is on.</h2>
 			<br>
 			<div class="col-xs-8 col-xs-offset-2 well text-black">
 				<h3>You can donate to the hunt by sending DOGE to this address</h3>
+<<<<<<< HEAD
 				<p id="donate"><%= link_to 'A4uyrmBRKZpM4K7TD31Yufj8nEdVHii6D5', 'http://dogechain.info/address/A4uyrmBRKZpM4K7TD31Yufj8nEdVHii6D5', target: "_blank" %></p>
+=======
+				<p id="donate"><%= link_to 'DJXezeVSnyvXiCf9icnwJ5Y3a73eA6mgKL', 'http://dogechain.info/address/DJXezeVSnyvXiCf9icnwJ5Y3a73eA6mgKL', target: "_blank" %></p>
+>>>>>>> 6c2a61793dba55e01f731186f0b7f445594b6662
 				<%= render 'layouts/qrcode' %>
 				<h4>or</h4>
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="padding-bottom: 15px;">
