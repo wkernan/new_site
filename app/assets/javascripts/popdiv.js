@@ -18,7 +18,7 @@
     $newdiv = $('<div/>').append("<div>"+textarray[rannum]+"</div>").css({
         'width': '300px',
         'height': '50px',
-        'font-size': '46px',
+        'font-size': '96px',
         'color': color,
         'font-family': 'Comic Sans MS',
         'z-index': '1000'
